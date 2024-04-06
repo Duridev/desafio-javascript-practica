@@ -12,4 +12,29 @@ const caja = document.querySelector("#caja")
 
 
 
+// * Funciones
+
+rojo.addEventListener( "click", () => {
+    caja.style.backgroundColor= '#e53e3e';
+});
+
+naranjo.addEventListener( "click", () => {
+    caja.style.backgroundColor= '#dd6b20';
+});
+
+amarillo.addEventListener( "click", () => {
+    caja.style.backgroundColor= '#faf089';
+});
+
+verde.addEventListener( "click", () => {
+    caja.style.backgroundColor= '#48bb78';
+});
+
+celeste.addEventListener( "click", () => {
+    caja.style.backgroundColor= '#81e6d9';
+});
+
+fuxia.addEventListener( "click", () => {
+    caja.style.backgroundColor= '#d53f8c';
+});
 
