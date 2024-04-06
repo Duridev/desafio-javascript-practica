@@ -56,3 +56,10 @@ function validarCampos() {
     return valido
 }
 
+
+function exito() {
+    limpiarErrores();
+    resultado.innerHTML = `Mensaje enviado con éxito !!!`
+}
+
+
