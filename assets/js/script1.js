@@ -63,3 +63,17 @@ function exito() {
 }
 
 
+
+
+// * Evento Submit - Función Principal
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    limpiarErrores();
+
+    const valido = validarCampos();
+
+    if (valido === true) {
+        exito();
+    };
+});
