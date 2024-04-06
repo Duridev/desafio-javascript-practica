@@ -20,3 +20,39 @@ function limpiarErrores() {
     errorMensaje.innerHTML = "";
     resultado.innerHTML = "";
 }
+
+
+function validarCampos() {
+
+    const nombre = document.querySelector("#nombre").value;
+    const asunto = document.querySelector("#asunto").value;
+    const mensaje = document.querySelector("#mensaje").value;
+
+
+    let valido = true;
+    const validar = /[a-zA-Z]/gim;
+
+    // Validar Nombre
+    if (!validar.test(nombre)) {
+        errorNombre.innerHTML = "El nombre es requerido.";
+
+        valido = false;
+    };
+
+    // Validar Asunto
+    if (!validar.test(asunto)) {
+        errorAsunto.innerHTML = "El asunto es requerido.";
+
+        valido = false;
+    };
+
+    // Validar Mensaje
+    if (!validar.test(mensaje)) {
+        errorMensaje.innerHTML = "El mensaje es requerido.";
+
+        valido = false;
+    };
+
+    return valido
+}
+
