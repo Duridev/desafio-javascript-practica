@@ -18,7 +18,7 @@ rojo.addEventListener( "click", () => {
     caja.style.backgroundColor= '#e53e3e';
 });
 
-naranjo.addEventListener( "click", () => {
+naranja.addEventListener( "click", () => {
     caja.style.backgroundColor= '#dd6b20';
 });
 
