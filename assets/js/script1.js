@@ -11,3 +11,12 @@ const resultado = document.querySelector(".resultado");
 const enviar = document.querySelector("#botton");
 
 
+
+// *  Funciones
+
+function limpiarErrores() {
+    errorNombre.innerHTML = "";
+    errorAsunto.innerHTML = "";
+    errorMensaje.innerHTML = "";
+    resultado.innerHTML = "";
+}
