@@ -23,3 +23,20 @@ sumar.addEventListener( "click", () => {
     }
 
 });
+
+restar.addEventListener( "click", () => {    
+    const num1 = parseInt(valor1.value);  
+    const num2 = parseInt(valor2.value);
+
+    const respResta = num1 - num2;
+    
+    limpiarCampos()
+
+    if (respResta >= 0) {
+        resultado.textContent = respResta;
+    } else {
+        resultado.textContent = "0"
+    }
+
+});
+
