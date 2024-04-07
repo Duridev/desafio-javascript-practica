@@ -1,6 +1,9 @@
 
 // * Variables
 
+const nombre = document.querySelector("#nombre");
+const asunto = document.querySelector("#asunto");
+const mensaje = document.querySelector("#mensaje");
 
 const errorNombre = document.querySelector(".errorNombre");
 const errorAsunto = document.querySelector(".errorAsunto");
@@ -24,30 +27,25 @@ function limpiarErrores() {
 
 function validarCampos() {
 
-    const nombre = document.querySelector("#nombre").value;
-    const asunto = document.querySelector("#asunto").value;
-    const mensaje = document.querySelector("#mensaje").value;
-
-
     let valido = true;
     const validar = /[a-zA-Z]/gim;
 
     // Validar Nombre
-    if (!validar.test(nombre)) {
+    if (!validar.test(nombre.value)) {
         errorNombre.innerHTML = "El nombre es requerido.";
 
         valido = false;
     };
 
     // Validar Asunto
-    if (!validar.test(asunto)) {
+    if (!validar.test(asunto.value)) {
         errorAsunto.innerHTML = "El asunto es requerido.";
 
         valido = false;
     };
 
     // Validar Mensaje
-    if (!validar.test(mensaje)) {
+    if (!validar.test(mensaje.value)) {
         errorMensaje.innerHTML = "El mensaje es requerido.";
 
         valido = false;
@@ -62,6 +60,11 @@ function exito() {
     resultado.innerHTML = `Mensaje enviado con éxito !!!`
 }
 
+function limpiarCampos() {
+    nombre.value = "";
+    mensaje.value = "";
+    asunto.value = "";
+}
 
 
 
@@ -75,5 +78,13 @@ form.addEventListener('submit', function (e) {
 
     if (valido === true) {
         exito();
+        // Uso un setTimeOut porque pienso que es cómodo que los datos
+        // se limpien luego de enviarlos, pero en el pdf del desafío,
+        // se muestra que siguen puestos luego de mostrar el mensaje de exito.
+        // asi que quise hacer ambas cosas xD
+        setTimeout(() => {
+            limpiarCampos();
+        }, 2000);
+
     };
 });
