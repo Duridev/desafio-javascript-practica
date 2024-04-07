@@ -40,3 +40,7 @@ restar.addEventListener( "click", () => {
 
 });
 
+function limpiarCampos() {
+    valor1.value = "";
+    valor2.value = "";
+}
