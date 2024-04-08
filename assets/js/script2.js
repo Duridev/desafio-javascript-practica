@@ -6,9 +6,10 @@ const naranja = document.querySelector("#btn-2");
 const amarillo = document.querySelector("#btn-3");
 const verde = document.querySelector("#btn-4");
 const celeste = document.querySelector("#btn-5");
-const fuxia = document.querySelector("#btn-6");
+const fucsia = document.querySelector("#btn-6");
 
 const caja = document.querySelector("#caja")
+
 
 
 
@@ -34,7 +35,7 @@ celeste.addEventListener( "click", () => {
     caja.style.backgroundColor= '#81e6d9';
 });
 
-fuxia.addEventListener( "click", () => {
+fucsia.addEventListener( "click", () => {
     caja.style.backgroundColor= '#d53f8c';
 });
 
